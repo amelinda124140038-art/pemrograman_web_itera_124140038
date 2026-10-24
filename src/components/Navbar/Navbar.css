@@ -1,0 +1,49 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 32px;
+  background-color: #ffffff !important; /* Putih bersih yang lembut */
+  border-bottom: 1.5px solid #d8e2dc !important; /* Border halus sage */
+  box-shadow: 0 2px 10px rgba(82, 121, 111, 0.05);
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Lora', serif !important;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #52796f !important; /* Sage Dark yang anggun & kontras */
+  text-decoration: none;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links a {
+  font-family: 'Nunito', sans-serif !important;
+  font-weight: 600;
+  color: #6c757d;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  transition: all 0.2s ease;
+}
+
+/* Efek saat menu diarahkan (Hover) & Aktif */
+.navbar-links a:hover {
+  color: #52796f;
+  background-color: #e8f0ec;
+}
+
+.navbar-links a.active {
+  color: #ffffff !important;
+  background-color: #84a98c !important; /* Sage Green Button */
+}

@@ -1,0 +1,265 @@
+:root {
+  --bg-primary: #f4f7f4;       /* Soft Sage Grey */
+  --card-bg: #ffffff;          /* Putih Bersih */
+  --sage-main: #84a98c;        /* Sage Green Utama */
+  --sage-dark: #52796f;        /* Sage Gelap (Teks/Hover) */
+  --sage-light: #e8f0ec;       /* Sage Muda Soft */
+  --text-main: #2f3e46;        /* Dark Slate  */
+  --text-muted: #6c757d;      /* Muted Grey */
+  --border-color: #d8e2dc;    /* Border Soft */
+}
+
+/* Base Style */
+body {
+  margin: 0;
+  background-color: var(--bg-primary);
+  color: var(--text-main);
+  font-family: 'Nunito', sans-serif;
+  line-height: 1.6;
+}
+
+/* Judul Menggunakan Font Lora */
+h1, h2, h3, h4, .navbar-brand {
+  font-family: 'Lora', serif;
+  color: var(--sage-dark);
+}
+
+/* Card & Form Container */
+.book-form, .book-card, .book-filter-container, .stats-card {
+  background: var(--card-bg) !important;
+  border: 1px solid var(--border-color) !important;
+  border-radius: 16px !important;
+  box-shadow: 0 4px 15px rgba(82, 121, 111, 0.06) !important;
+  padding: 20px;
+}
+
+/* Input Form & Select */
+input[type="text"], select {
+  background-color: #fdfdfd !important;
+  border: 1.5px solid var(--border-color) !important;
+  color: var(--text-main) !important;
+  border-radius: 10px !important;
+  padding: 10px 14px !important;
+  font-family: 'Nunito', sans-serif !important;
+}
+
+input:focus, select:focus {
+  outline: none !important;
+  border-color: var(--sage-main) !important;
+  box-shadow: 0 0 0 3px rgba(132, 169, 140, 0.25) !important;
+}
+
+/* Button Utama (Sage Green) */
+.btn-primary, button[type="submit"] {
+  background-color: var(--sage-main) !important;
+  color: #ffffff !important;
+  border: none !important;
+  border-radius: 10px !important;
+  font-family: 'Nunito', sans-serif !important;
+  font-weight: 700 !important;
+  padding: 10px 20px !important;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-primary:hover, button[type="submit"]:hover {
+  background-color: var(--sage-dark) !important;
+  transform: translateY(-1px);
+}
+
+/* Filter Buttons */
+.filter-btn {
+  background-color: var(--sage-light) !important;
+  color: var(--sage-dark) !important;
+  border: none !important;
+  border-radius: 20px !important;
+  padding: 6px 16px !important;
+  font-weight: 600 !important;
+}
+
+.filter-btn.active {
+  background-color: var(--sage-main) !important;
+  color: #ffffff !important;
+}
+
+/* Action Buttons (Edit & Hapus) */
+.btn-edit {
+  background-color: #e2ece9 !important;
+  color: var(--sage-dark) !important;
+  border-radius: 8px !important;
+}
+
+.btn-delete {
+  background-color: #fde8e8 !important;
+  color: #e63946 !important;
+  border-radius: 8px !important;
+}
+
+:root {
+  --bg-primary: #f4f7f4;       /* Soft Sage Grey */
+  --card-bg: #ffffff;          /* Putih Bersih */
+  --sage-main: #84a98c;        /* Sage Green Utama */
+  --sage-dark: #52796f;        /* Sage Gelap (Teks/Hover) */
+  --sage-light: #e8f0ec;       /* Sage Muda Soft */
+  --text-main: #2f3e46;        /* Dark Slate */
+  --text-muted: #6c757d;      /* Muted Grey */
+  --border-color: #d8e2dc;    /* Border Soft */
+}
+
+/* Base Style */
+body {
+  margin: 0;
+  background-color: var(--bg-primary);
+  color: var(--text-main);
+  font-family: 'Nunito', sans-serif;
+  line-height: 1.6;
+}
+
+/* Judul Menggunakan Font Lora */
+h1, h2, h3, h4, .navbar-brand {
+  font-family: 'Lora', serif;
+  color: var(--sage-dark);
+}
+
+/* Card & Form Container */
+.book-form, .book-card, .book-filter-container, .stats-card {
+  background: var(--card-bg) !important;
+  border: 1px solid var(--border-color) !important;
+  border-radius: 16px !important;
+  box-shadow: 0 4px 15px rgba(82, 121, 111, 0.06) !important;
+  padding: 20px;
+}
+
+/* Input Form & Select */
+input[type="text"], select {
+  background-color: #fdfdfd !important;
+  border: 1.5px solid var(--border-color) !important;
+  color: var(--text-main) !important;
+  border-radius: 10px !important;
+  padding: 10px 14px !important;
+  font-family: 'Nunito', sans-serif !important;
+}
+
+input:focus, select:focus {
+  outline: none !important;
+  border-color: var(--sage-main) !important;
+  box-shadow: 0 0 0 3px rgba(132, 169, 140, 0.25) !important;
+}
+
+/* Button Utama (Sage Green) */
+.btn-primary, button[type="submit"] {
+  background-color: var(--sage-main) !important;
+  color: #ffffff !important;
+  border: none !important;
+  border-radius: 10px !important;
+  font-family: 'Nunito', sans-serif !important;
+  font-weight: 700 !important;
+  padding: 10px 20px !important;
+  cursor: pointer;
+}
+
+/* Filter Buttons */
+.filter-btn {
+  background-color: var(--sage-light) !important;
+  color: var(--sage-dark) !important;
+  border: none !important;
+  border-radius: 20px !important;
+  padding: 6px 16px !important;
+  font-weight: 600 !important;
+}
+
+.filter-btn.active {
+  background-color: var(--sage-main) !important;
+  color: #ffffff !important;
+}
+
+/* Action Buttons (Edit & Hapus) */
+.btn-edit {
+  background-color: #e2ece9 !important;
+  color: var(--sage-dark) !important;
+  border-radius: 8px !important;
+}
+
+.btn-delete {
+  background-color: #fde8e8 !important;
+  color: #e63946 !important;
+  border-radius: 8px !important;
+}
+
+/* ========================================== */
+/* EFEK HOVER NGAMBANG (LIFT UP)              */
+/* ========================================== */
+
+/* Efek Ngambang untuk Kartu Buku & Kartu Statistik */
+.book-card,
+.stats-card {
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), 
+              box-shadow 0.3s ease-in-out !important;
+}
+
+.book-card:hover,
+.stats-card:hover {
+  transform: translateY(-8px) scale(1.01) !important;
+  box-shadow: 0 12px 28px rgba(82, 121, 111, 0.18) !important;
+}
+
+/* Efek Ngambang Halus Tombol */
+.btn-primary, 
+.filter-btn, 
+.btn-edit, 
+.btn-delete,
+button[type="submit"] {
+  transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+}
+
+.btn-primary:hover, 
+.filter-btn:hover, 
+.btn-edit:hover, 
+.btn-delete:hover,
+button[type="submit"]:hover {
+  transform: translateY(-3px) !important;
+  box-shadow: 0 6px 14px rgba(82, 121, 111, 0.25) !important;
+}
+
+/* RESET: Pastikan kontainer besar di statistik TIDAK ngambang */
+.stats-container,
+.stats-wrapper,
+.stats-page {
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+/* KHUSUS: Kotak-kotak statistik & Kartu Buku saja yang ngambang */
+.book-card,
+.stat-card,
+.stats-grid > div,
+.stats-cards > div {
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), 
+              box-shadow 0.3s ease-in-out !important;
+}
+
+.book-card:hover,
+.stat-card:hover,
+.stats-grid > div:hover,
+.stats-cards > div:hover {
+  transform: translateY(-8px) scale(1.01) !important;
+  box-shadow: 0 12px 28px rgba(82, 121, 111, 0.18) !important;
+}
+
+/* Efek Ngambang Halus Tombol */
+.btn-primary, 
+.filter-btn, 
+.btn-edit, 
+.btn-delete,
+button[type="submit"] {
+  transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+}
+
+.btn-primary:hover, 
+.filter-btn:hover, 
+.btn-edit:hover, 
+.btn-delete:hover,
+button[type="submit"]:hover {
+  transform: translateY(-3px) !important;
+  box-shadow: 0 6px 14px rgba(82, 121, 111, 0.25) !important;
+}
