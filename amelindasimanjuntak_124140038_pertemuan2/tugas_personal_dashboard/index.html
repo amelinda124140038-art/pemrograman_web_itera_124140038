@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KasKu - Daily Expense</title>
+  <!-- Google Fonts (Poppins) & FontAwesome Icons CDN Terbaru -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Top Navbar Header -->
+  <header class="navbar">
+    <div class="logo-area">
+      <div class="logo-icon"><i class="fa-solid fa-wallet"></i></div>
+      <div class="logo-text">
+        <h1>KasKu</h1>
+        <span>Daily Expense</span>
+      </div>
+    </div>
+    <div class="clock-badge">
+      <i class="fa-regular fa-clock"></i>
+      <span id="liveClock">00:00:00 WIB</span>
+    </div>
+  </header>
+
+  <!-- Main Dashboard Container -->
+  <main class="dashboard-container">
+    
+    <!-- Sidebar Widgets -->
+    <aside class="sidebar-widgets">
+      
+      <!-- Ringkasan Total Saldo & Selisih -->
+      <section class="card summary-card">
+        <div class="card-header-small">
+          <i class="fa-solid fa-chart-pie"></i> Ringkasan Keuangan
+        </div>
+        <div class="balance-box">
+          <span class="balance-label">Sisa Uang Saku (Selisih):</span>
+          <h2 id="totalBalanceDisplay">Rp 0</h2>
+        </div>
+        <div class="summary-grid">
+          <div class="summary-item income">
+            <span>Total Pemasukan</span>
+            <strong id="totalIncomeDisplay">Rp 0</strong>
+          </div>
+          <div class="summary-item expense">
+            <span>Total Pengeluaran</span>
+            <strong id="totalExpenseDisplay">Rp 0</strong>
+          </div>
+        </div>
+      </section>
+
+      <!-- Quotes Motivasi Keuangan -->
+      <section class="card quote-card">
+        <div class="card-header-small">
+          <i class="fa-solid fa-quote-left"></i> Quotes Hari Ini
+        </div>
+        <blockquote id="quoteText" class="quote-text">"Mengambil kutipan..."</blockquote>
+        <p id="quoteAuthor" class="quote-author">- ...</p>
+      </section>
+
+    </aside>
+
+    <!-- Main Content Area -->
+    <section class="main-content">
+      
+      <!-- Card Form Input Transaksi -->
+      <div class="card form-section">
+        <div class="section-title-bar">
+          <h2><i class="fa-solid fa-pen-to-square"></i> Catat Transaksi Baru</h2>
+        </div>
+
+        <form id="transactionForm" class="input-form">
+          <div class="form-group-top">
+            <input type="text" id="transTitleInput" placeholder="Masukkan Transaksi" required>
+            <input type="number" id="transAmountInput" placeholder="Nominal" min="1" required>
+          </div>
+
+          <div class="form-row">
+            <select id="transTypeSelect">
+              <option value="expense"> Pengeluaran</option>
+              <option value="income"> Pemasukan (Uang Masuk/Transfer)</option>
+            </select>
+
+            <select id="transCategorySelect">
+              <option value="Makan & Minum"> Makan & Minum</option>
+              <option value="Kuliah & Laprak"> Kuliah & Laprak</option>
+              <option value="Kos & Tagihan"> Kos & Tagihan</option>
+              <option value="Hiburan & Bensin"> Hiburan & Bensin</option>
+              <option value="Lain-lain"> Lain-lain</option>
+            </select>
+
+            <button type="submit" class="btn btn-primary">
+              <i class="fa-solid fa-plus"></i> Tambah
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Card Daftar Transaksi -->
+      <div class="card list-section">
+        <div class="section-title-bar">
+          <h2><i class="fa-solid fa-receipt"></i> Riwayat Transaksi</h2>
+          <div style="display: flex; align-items: center; gap: 8px;">
+            <span class="badge" id="transCountBadge">0 Transaksi</span>
+            <!-- Tombol Hapus Pilihan Multiple -->
+            <button type="button" id="deleteSelectedBtn" class="btn-clear-all" style="display: none;" onclick="app.deleteSelectedTransactions()">
+              <i class="fa-solid fa-trash-can"></i> Hapus Pilihan (<span id="selectedCount">0</span>)
+            </button>
+          </div>
+        </div>
+
+        <!-- Filter Bar + Select All -->
+        <div class="filter-bar-container">
+          <div class="filter-bar">
+            <button class="filter-btn active" data-filter="all">Semua</button>
+            <button class="filter-btn" data-filter="income">Pemasukan</button>
+            <button class="filter-btn" data-filter="expense">Pengeluaran</button>
+          </div>
+          <label class="select-all-label">
+            <input type="checkbox" id="selectAllCheckbox" onchange="app.toggleSelectAll(this.checked)"> Pilih Semua
+          </label>
+        </div>
+
+        <!-- Dynamic Transaction List -->
+        <div id="transactionList" class="transaction-list">
+          <!-- Rendered dynamically via JavaScript -->
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- Custom Modal Konfirmasi Hapus -->
+  <div id="customModal" class="modal-overlay">
+    <div class="modal-card">
+      <div class="modal-icon">
+        <i class="fa-solid fa-triangle-exclamation"></i>
+      </div>
+      <h3 id="modalTitle">Konfirmasi Hapus</h3>
+      <p id="modalMessage">Yakin mau menghapus data ini?</p>
+      <div class="modal-actions">
+        <button id="modalCancelBtn" class="btn btn-secondary">Batal</button>
+        <button id="modalConfirmBtn" class="btn btn-danger">Hapus</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
