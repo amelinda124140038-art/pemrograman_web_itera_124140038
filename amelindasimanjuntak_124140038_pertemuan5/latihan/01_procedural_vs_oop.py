@@ -8,8 +8,8 @@
 # Masalah: Jika struktur dictionary berubah, semua fungsi yang bergantung bisa rusak.
 # ------------------------------------------------------------------------------
 mahasiswa_proc = {
-    "nama": "Budi Santoso",
-    "nim": "121140001",
+    "nama": "Dina",
+    "nim": "123456789",
     "jurusan": "Teknik Informatika",
     "ipk": 3.45
 }

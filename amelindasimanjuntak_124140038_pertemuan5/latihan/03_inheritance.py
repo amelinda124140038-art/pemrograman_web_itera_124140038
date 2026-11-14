@@ -46,7 +46,7 @@ class Mobil(Kendaraan):
 
     # OVERRIDING KLAKSON
     def klakson(self) -> str:
-        return "Telolet! Telolet! (Klakson Mobil)"
+        return "Telolet! Telolet!"
 
     def isi_bensin(self, liter: float):
         if self.sisa_bensin + liter <= self.kapasitas_tangki:
@@ -68,7 +68,7 @@ class Motor(Kendaraan):
         return f"{super().deskripsi()} [Motor Sport {self.kapasitas_cc}cc]"
 
     def klakson(self) -> str:
-        return "Bip bip! (Klakson Motor)"
+        return "Bip bip!"
 
     def wheelie(self):
         print(f"[{self.merek} {self.model}] Melakukan atraksi wheelie satu roda!")

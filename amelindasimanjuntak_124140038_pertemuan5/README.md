@@ -1,9 +1,9 @@
 # Tugas Praktikum Pertemuan 5 - Sistem Manajemen Perpustakaan Sederhana (OOP Python)
 
 ## Identitas Mahasiswa
-* **Nama Lengkap:** [Isi Nama Lengkap Kamu]
-* **NIM:** [Isi NIM Kamu]
-* **Kelas Praktikum:** [Isi Kelas Praktikum Kamu]
+* **Nama Lengkap:** Amelinda Simanjuntak
+* **NIM:** 124140038
+* **Kelas Praktikum:** RA
 
 ---
 
@@ -27,3 +27,12 @@ Program ini merupakan simulasi sistem manajemen perpustakaan sederhana berbasis 
 2. Masuk ke direktori `tugas_perpustakaan`:
    ```bash
    cd tugas_perpustakaan
+
+### 1. Fitur Penambahan Koleksi
+![Penambahan](images/penambahan.jpeg)
+
+### 2. Fitur Penampilan Katalog
+![Penampilan](images/penampilan.jpeg)
+
+### 3. Fitur Pencarian Item
+![Pencarian](images/pencarian.jpeg)

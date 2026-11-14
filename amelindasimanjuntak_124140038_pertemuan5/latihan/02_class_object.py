@@ -56,15 +56,15 @@ if __name__ == "__main__":
     print("Total mahasiswa awal:", Mahasiswa.total_mahasiswa_terdaftar)
 
     # Instansiasi 2 objek mahasiswa berbeda
-    mhs1 = Mahasiswa("Ahmad Fadhil", "121140001", 3.72)
-    mhs2 = Mahasiswa("Nabila Putri", "121140002", 3.40)
+    mhs1 = Mahasiswa("Dina", "123456789", 3.72)
+    mhs2 = Mahasiswa("Dini", "123456780", 3.40)
 
     print("Total mahasiswa sekarang:", Mahasiswa.total_mahasiswa_terdaftar)
 
     # Uji coba penambahan mata kuliah (instance attribute terisolasi)
     mhs1.tambah_matkul("Pemrograman Web")
     mhs1.tambah_matkul("Basis Data")
-    mhs2.tambah_matkul("Kecerdasan Buatan")
+    mhs2.tambah_matkul("Inteligensi Buatan")
 
     print(f"\nMatkul {mhs1.nama}: {mhs1.daftar_matkul}")
     print(f"Matkul {mhs2.nama}: {mhs2.daftar_matkul}")

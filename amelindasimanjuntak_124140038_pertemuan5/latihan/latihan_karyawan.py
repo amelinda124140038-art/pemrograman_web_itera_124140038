@@ -44,7 +44,7 @@ class Karyawan:
 # --- Pengujian Class Karyawan ---
 if __name__ == "__main__":
     # 1. Membuat objek karyawan dengan gaji valid (>= UMR)
-    karyawan1 = Karyawan("Budi Santoso", "Backend Developer", 6500000)
+    karyawan1 = Karyawan("Amel", "Backend Developer", 6500000)
     print(karyawan1)
 
     pajak = 5  # 5%
@@ -60,6 +60,6 @@ if __name__ == "__main__":
 
     # 3. Menguji validasi saat inisialisasi objek baru di bawah UMR
     try:
-        karyawan2 = Karyawan("Siti Aminah", "Staff Admin", 3000000)
+        karyawan2 = Karyawan("Dika", "Staff Admin", 3000000)
     except ValueError as err:
         print(f"Validasi Inisialisasi Tertangkap: {err}")

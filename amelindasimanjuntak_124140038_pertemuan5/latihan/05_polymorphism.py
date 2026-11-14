@@ -113,8 +113,8 @@ if __name__ == "__main__":
 
     # Uji Operator Overloading
     print("\n--- Uji Operator Overloading Dompet ---")
-    d1 = Dompet("Andi", 150000)
-    d2 = Dompet("Budi", 250000)
+    d1 = Dompet("Dina", 150000)
+    d2 = Dompet("Dini", 250000)
     d_gabungan = d1 + d2  # Memanggil __add__
     print("Dompet 1 :", d1)
     print("Dompet 2 :", d2)
